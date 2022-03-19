@@ -7,6 +7,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
+* 🚀 xioo init ([d987046](https://github.com/zhaodeezhu/xioo/commit/d9870466e6a4b25aea3067dd982854406fe6c3fe))
+
+## 1.1.0 (2022-03-19)
+
+
+### Features
+
 * 🚀 xioo@v1.0.0 ([0532c69](https://github.com/zhaodeezhu/xioo/commit/0532c6907da8624a6617f84d5dcdc82d466d7dd1))
 
 ### [0.1.24](https://github.com/zhaodeezhu/xioo/compare/v0.1.23...v0.1.24) (2022-02-19)
