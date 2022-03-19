@@ -1,6 +1,6 @@
 {
   "name": "@xioo/kafka",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "typings": "./build/index.d.ts",
   "main": "./build/index.js",
   "files": [

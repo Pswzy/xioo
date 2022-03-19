@@ -8,3 +8,4 @@ tsconfig.json
 changelog.config.js
 /test/node_modules
 **/src
+plugins
