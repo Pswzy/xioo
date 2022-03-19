@@ -1,0 +1,21 @@
+/test/node_modules
+/node_modules
+# tsconfig.json
+/build
+**/node_modules
+**/build
+# /test
+# /src
+# /.vscode
+# /typings
+
+# /test/node_modules
+# /node_modules
+# tsconfig.json
+# .commitlintrc.js
+# changelog.config.js
+# # /build
+# /test
+# /src
+# /.vscode
+# /typings

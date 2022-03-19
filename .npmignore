@@ -1,0 +1,10 @@
+src
+/node_modules
+tsconfig.json
+/.vscode
+/test
+/typings
+.commitlintrc.js
+changelog.config.js
+/test/node_modules
+**/src

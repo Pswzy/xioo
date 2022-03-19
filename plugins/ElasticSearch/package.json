@@ -1,0 +1,19 @@
+{
+  "name": "@xioo/elasticsearch",
+  "version": "1.0.4",
+  "typings": "./build/index.d.ts",
+  "main": "./build/index.js",
+  "files": [
+    "build",
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Max",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.13.0"
+  },
+  "description": "xioo service of elasticsearch"
+}
