@@ -1,6 +1,6 @@
 {
   "name": "@xioo/redis",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "typings": "./build/index.d.ts",
   "main": "./build/index.js",
   "files": [
@@ -13,7 +13,7 @@
   "author": "Max",
   "license": "ISC",
   "dependencies": {
-    "redis": "^3.1.2"
+    "redis": "^4.0.4"
   },
   "description": "xioo service of redis"
 }

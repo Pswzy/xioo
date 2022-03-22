@@ -343,6 +343,18 @@ export default class Auth extends Controller {
       data: res
     }
   }
+
+  @Get('/testredis')
+  async testredis() {
+    const { ctx, app: { service: { redis } } } = this;
+    // redis.setString('zhaodeezhu', '123456');
+    const res = await redis.getString('zhaodeezhu');
+    console.log(res)
+    return {
+      status: '0',
+      message: '12345'
+    }
+  }
 }
 
 // export = Auth;

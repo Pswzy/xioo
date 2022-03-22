@@ -18,7 +18,7 @@ export default class Config {
       port: 6379,
       host: '127.0.0.1',
       db: 8,
-      password: '123456',
+      password: '',
       launch: true
     }
   }
@@ -27,7 +27,7 @@ export default class Config {
       port: 3306,
       host: '127.0.0.1',
       user: 'root',
-      password: '123455',
+      password: '123456',
       database: 'program_view',
       launch: true
     }
