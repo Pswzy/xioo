@@ -121,7 +121,6 @@ class ServiceConstructor extends Service {
   /** 创建连接分组 */
   private createConnectGroup<T>(modelName: IModelname) {
     let index = 0;
-    console.red(this.app.servicePlugins);
     if(!this.app.servicePlugins[modelName]) return;
     Object.keys(this.app.config[modelName]).forEach(key => {
       const item = this.app.config[modelName][key];

@@ -355,6 +355,21 @@ export default class Auth extends Controller {
       message: '12345'
     }
   }
+
+  @Get('/testxioos')
+  async testxioos() {
+    const { ctx, app: { xios } } = this;
+    const res = await xios.base.requset({
+      url: '/promise/auth/testredis'
+    })
+
+    console.log('wo yijing zhixing ---->')
+    console.log(res);
+
+    return {
+      status: '0'
+    };
+  }
 }
 
 // export = Auth;

@@ -22,7 +22,7 @@ import ScheduleManager from '../Schedule/ScheduleManager';
 import PluginManager from '../Plugin/PluginManager';
 import Agant from '../Agant';
 import { Get, Delete, Post, Patch, Route } from "../Router/structure";
-import Xios from '../Service/xios';
+// import Xios from '../Service/xios';
 import cors from 'koa-cors';
 
 type InitServicePlugins = {
@@ -77,7 +77,7 @@ class App {
   static Route = Route;
   static Controller = Controller;
 
-  constructor({ servicePlugins = {} }: {servicePlugins?: any} = {}) {
+  constructor({ servicePlugins = {}, appPlugins = {} }: { servicePlugins?: any, appPlugins?: any } = {}) {
     // this.server = new Server(this);
     // 配置开启了socket以后再开起
     if (this.config.socketConfig.launch) {
@@ -85,7 +85,7 @@ class App {
     }
     this.servicePlugins = servicePlugins;
 
-    this.createXioosRequest();
+    this.createXioosRequest(appPlugins.xios);
     // 执行服务插件注册
     this.service.initServicePlugins();
 
@@ -99,18 +99,19 @@ class App {
   }
 
   /** 创建请求对象列表数据 */
-  private createXioosRequest() {
+  private createXioosRequest(Xios) {
     const xioosConfig = this.config.xios;
     if (!xioosConfig || typeof xioosConfig !== 'object') return;
 
-    this.setXioosByConfig(xioosConfig);
+    this.setXioosByConfig(xioosConfig, Xios);
   }
 
   /** 
    * 按配置设置请求对象
    * 如果键值存在相同，将会跳过并且打印提醒
    */
-  setXioosByConfig(xioosConfig: any) {
+  setXioosByConfig(xioosConfig: any, Xios) {
+    if (!Xios) return;
     Object.keys(xioosConfig).forEach(xiooskey => {
       if (this.xios[xiooskey]) {
         console.redunderline(`${xiooskey}请求对象已经存在，设置将被跳过！`);

@@ -77,7 +77,7 @@ class Xios implements IXios {
     this.host = xiooUrl.host.split(':')[0];
     this.prefix = xiooUrl.pathname;
     this.port = xiooUrl.port;
-    this.xioo = xiooUrl.protocol === 'http:' ? http : https;
+    this.xioo = xiooUrl.protocol === 'https:' ? https : http;
   }
 
   /** 解析url参数 */
@@ -158,7 +158,7 @@ class Xios implements IXios {
             try {
               data = JSON.parse(data);
             } catch (e) {
-              console.red(e);
+              console.log(e);
             }
             if(isStatus) {
               resolve({
