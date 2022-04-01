@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/zhaodeezhu/xioo/compare/v1.2.0...v1.2.1) (2022-04-01)
+
+
+### Bug Fixes
+
+* 🐛 修改/兼容windows系统 ([3beffb2](https://github.com/zhaodeezhu/xioo/commit/3beffb2c24fc4e26f1cf9afaefe939f5d886ca06))
+
 ## [1.2.0](https://github.com/zhaodeezhu/xioo/compare/v1.1.1...v1.2.0) (2022-03-22)
 
 
