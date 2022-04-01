@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/zhaodeezhu/xioo/compare/v1.2.1...v1.3.0) (2022-04-01)
+
+
+### Features
+
+* 🚀 拆分请求库xios ([ea29224](https://github.com/zhaodeezhu/xioo/commit/ea2922441dee1d08538aec1d7b2ad44fd7654361))
+
 ### [1.2.1](https://github.com/zhaodeezhu/xioo/compare/v1.2.0...v1.2.1) (2022-04-01)
 
 
