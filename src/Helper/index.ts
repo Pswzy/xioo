@@ -209,13 +209,15 @@ abstract class Util {
 
       // let interfaceCodeitem = ``;
       if(key.indexOf('pages') > -1) {
-        const servicePath = key.split('pages')[1];
+        let servicePath = key.split('pages')[1];
+        servicePath = servicePath.replace(/\\/g, '/');
         importCode += `
           import ${serviceName} from '../app/pages${servicePath}';
         `
       } else {
+        const value = key.replace(/\\/g, '/');
         importCode += `
-          import ${serviceName} from '../app/server/${fileName}/${key}';
+          import ${serviceName} from '../app/server/${fileName}/${value}';
         `
       }
       
