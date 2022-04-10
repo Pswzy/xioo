@@ -247,6 +247,21 @@ declare module 'xioo' {
     [key: string]: T;
   }
 
+  interface IEmail {
+    send: (options: IEmailOption) => any;
+  }
+
+  type IEmailOption = {
+    /** 接收方 */
+    to: string;
+    /** 主题 */
+    subject?: string;
+    /** 邮件正文 */
+    text?: string;
+    /** html模板，存在html以html为准 */
+    html?: string; 
+  }
+
   /** service管理器 */
   interface IServiceManager extends IService {
     /** redis连接组 */
@@ -257,6 +272,8 @@ declare module 'xioo' {
     pgGroup: ISource<IPgSQL>;
     /** es连接组 */
     esGroup: ISource<IElasticSearch>;
+    /** email连接组 */
+    emailGroup: ISource<IEmail>;
     /** 第一个redis连接 */
     redis: IRedis;
     /** 第一个mysql连接 */
@@ -265,6 +282,8 @@ declare module 'xioo' {
     pg: IPgSQL;
     /** 第一个es */
     es: IElasticSearch;
+    /** 第一个email */
+    email: IEmail;
     /** kafka */
     kafka: {
       producer: any;

@@ -10,6 +10,7 @@ import App from 'xioo';
 import redis from '@xioo/redis';
 import pg from '@xioo/postgress';
 import xios from '@xioo/xios';
+import email from '@xioo/email';
 
 // import User from './controllers/auth'
 
@@ -17,7 +18,7 @@ import xios from '@xioo/xios';
 
 console.log('我执行了')
 
-const app = new App({ servicePlugins: { redis, pg }, appPlugins: { xios } });
+const app = new App({ servicePlugins: { redis, pg, email }, appPlugins: { xios } });
 
 app.start();
 

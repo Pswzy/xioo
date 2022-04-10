@@ -78,6 +78,18 @@ export default class Config {
     }
   }
 
+  email = {
+    test: {
+      service: '163',
+      secure: true,
+      // 发送邮箱需要配置自己的
+      user: 'xiooshow@163.com',
+      // 此处状态码已混淆处理，需要配置自己的
+      pass: '1234567',
+      launch: true
+    }
+  }
+
   kafka = {
     kafkaProducer: {
       eus_test: {

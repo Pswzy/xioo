@@ -40,6 +40,10 @@ const ModelLsit = {
   kafkaConsumer: {
     group: 'kafkaConsumerGroup',
     // TypeModel: KafkaConsumer
+  },
+  email: {
+    group: 'emailGroup',
+    // TypeModel: KafkaConsumer
   }
 }
 
@@ -47,7 +51,7 @@ interface ISource<T> {
   [key: string]: T
 }
 
-type IModelname = 'redis' | 'mysql' | 'pg' | 'es' | 'kafkaProducer' | 'kafkaConsumer';
+type IModelname = 'redis' | 'mysql' | 'pg' | 'es' | 'kafkaProducer' | 'kafkaConsumer' | 'email';
 
 class ServiceConstructor extends Service {
   /** redis连接组 */
@@ -62,6 +66,8 @@ class ServiceConstructor extends Service {
   kafkaProducerGroup: ISource<any> = {};
   /** kafka消费者组 */
   kafkaConsumerGroup: ISource<any> = {};
+  /** email连接组 */
+  emailGroup: ISource<any> = {};
 
   /** 第一个redis */
   redis: any;
@@ -71,6 +77,8 @@ class ServiceConstructor extends Service {
   pg: any;
   /** 第一个es */
   es: any;
+  /** 第一个email */
+  email: any;
   /** 第一个kafka生产者连接 */
   kafkaProducer: any;
   /** 第一个kafka消费者连接 */
@@ -115,6 +123,8 @@ class ServiceConstructor extends Service {
     this.createConnectGroup<any>('kafkaProducer');
     /** 创建kafka消费者连接 */
     this.createConnectGroup<any>('kafkaConsumer');
+    /** 创建email连接 */
+    this.createConnectGroup<any>('email');
     this.makeKafka();
   }
 

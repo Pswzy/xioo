@@ -370,6 +370,22 @@ export default class Auth extends Controller {
       status: '0'
     };
   }
+
+  @Get('/testemail')
+  async testEamil() {
+    const { app: { service: { email } } } = this;
+    const res = await email.send({
+      to: 'zhaoxiuquan@cvte.com',
+      subject: '哈哈哈',
+      text: '我是好人'
+    })
+
+    return {
+      status: '0',
+      message: '123',
+      data: res
+    }
+  }
 }
 
 // export = Auth;

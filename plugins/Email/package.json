@@ -1,5 +1,5 @@
 {
-  "name": "@xioo/xios",
+  "name": "@xioo/email",
   "version": "1.4.0",
   "typings": "./build/index.d.ts",
   "main": "./build/index.js",
@@ -13,7 +13,7 @@
   "author": "Max",
   "license": "ISC",
   "dependencies": {
-    "form-data": "^4.0.0"
+    "nodemailer": "^6.7.3"
   },
-  "description": "xioo service of http request"
+  "description": "xioo service of elasticsearch"
 }
