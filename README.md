@@ -10,12 +10,13 @@
 
 | Name                | Description   | Register                                         | Version                                                      |
 | ------------------- | ------------- | ------------------------------------------------ | ------------------------------------------------------------ |
-| @xioo/redis         | Redis连接插件 | redis                                            | ![https://www.npmjs.com/package/@xioo/redis](https://img.shields.io/badge/npm-v1.1.0-orange) ![https://github.com/zhaodeezhu/xioo/tree/master/plugins/Redis](https://img.shields.io/badge/github-%40xioo%2Fredis-yellowgreen) |
-| @xioo/postgress     | PG连接插件    | pg                                               | ![https://www.npmjs.com/package/@xioo/postgress](https://img.shields.io/badge/npm-v1.1.0-orange) ![https://github.com/zhaodeezhu/xioo/tree/master/plugins/Postgress](https://img.shields.io/badge/github-%40xioo%2Fpostgress-yellowgreen) |
+| @xioo/redis         | Redis连接插件 | redis                                            | [![redis](https://img.shields.io/badge/npm-v1.4.0-orange)](https://www.npmjs.com/package/@xioo/redis) ![https://github.com/zhaodeezhu/xioo/tree/master/plugins/Redis](https://img.shields.io/badge/github-%40xioo%2Fredis-yellowgreen) |
+| @xioo/postgress     | PG连接插件    | pg                                               | [![redis](https://img.shields.io/badge/npm-v1.4.0-orange)](https://www.npmjs.com/package/@xioo/postgress) ![https://github.com/zhaodeezhu/xioo/tree/master/plugins/Postgress](https://img.shields.io/badge/github-%40xioo%2Fpostgress-yellowgreen) |
 | @xioo/kafka         | Kafka连接插件 | 生产者：kafkaProducer<br />消费者：kafkaConsumer | ![https://www.npmjs.com/package/@xioo/kafka](https://img.shields.io/badge/npm-v1.1.0-orange) ![https://github.com/zhaodeezhu/xioo/tree/master/plugins/Kafka](https://img.shields.io/badge/github-%40xioo%2Fkafka-yellowgreen) |
 | @xioo/mysql         | Mysql连接插件 | mysql                                            | ![https://www.npmjs.com/package/@xioo/mysql](https://img.shields.io/badge/npm-v1.1.0-orange) ![https://github.com/zhaodeezhu/xioo/tree/master/plugins/Mysql](https://img.shields.io/badge/github-%40xioo%2Fmysql-yellowgreen) |
 | @xioo/elasticsearch | ES连接插件    | es                                               | ![https://www.npmjs.com/package/@xioo/elasticsearch](https://img.shields.io/badge/npm-v1.1.0-orange) ![https://github.com/zhaodeezhu/xioo/tree/master/plugins/ElasticSearch](https://img.shields.io/badge/github-%40xioo%2Felasticsearch-yellowgreen) |
 | @xioo/cli           | 脚手架工具    |                                                  | ![[@xioo/cli](https://www.npmjs.com/package/@xioo/cli)](https://img.shields.io/badge/npm-v1.1.0-orange) ![https://github.com/zhaodeezhu/xioo/tree/master/cli](https://img.shields.io/badge/github-%40xioo%2Fcli-yellowgreen) |
+| @xioo/email         | 发送邮件服务  | email                                            | [![redis](https://img.shields.io/badge/npm-v1.4.0-orange)](https://www.npmjs.com/package/@xioo/email) ![@xioo/email](https://img.shields.io/badge/github-%40xioo%2Femail-yellowgreen) |
 
 ## 开始
 
