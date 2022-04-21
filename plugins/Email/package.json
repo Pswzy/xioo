@@ -1,6 +1,6 @@
 {
   "name": "@xioo/email",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "typings": "./build/index.d.ts",
   "main": "./build/index.js",
   "files": [

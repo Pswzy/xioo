@@ -437,8 +437,8 @@
         "affectsGlobalScope": false
       },
       "./src/index.ts": {
-        "version": "d1eabb8701b0b35d5fa3d176a4b634934ac07ad263269114af0b9e33acc48398",
-        "signature": "f8d51340980ad2d291d78c4c8d9e4a057fd459c283fae91d64620feb914019f0",
+        "version": "d64ce970181d8ceeb189b5dfb68b07bdbb012da9d5eb8e4a693d3e82ffd1724d",
+        "signature": "74646982c7fc74cb931b87790ab0d1238be223368640dd63907cc5236920fae6",
         "affectsGlobalScope": false
       },
       "../../node_modules/@types/accepts/index.d.ts": {
@@ -1430,10 +1430,12 @@
         "../../node_modules/@types/node/stream.d.ts"
       ],
       "./src/index.ts": [
+        "../../node_modules/@types/node/buffer.d.ts",
         "../../node_modules/@types/node/fs.d.ts",
         "../../node_modules/@types/node/http.d.ts",
         "../../node_modules/@types/node/https.d.ts",
         "../../node_modules/@types/node/querystring.d.ts",
+        "../../node_modules/@types/node/stream.d.ts",
         "../../node_modules/@types/node/url.d.ts",
         "./node_modules/form-data/index.d.ts"
       ]

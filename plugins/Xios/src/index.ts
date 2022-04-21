@@ -3,6 +3,8 @@ import * as https from 'https';
 import * as url from 'url';
 import * as querystring from 'querystring';
 import * as fs from 'fs';
+import { Buffer } from 'buffer';
+import { Readable } from 'stream';
 
 import FormData from 'form-data';
 
@@ -51,6 +53,8 @@ interface IOption {
   form?: { [key: string]: any };
   /** 是否要返回状态码 */
   isStatus?: boolean;
+  /** 文件名, file是buffer的时候需要 */
+  filename?: string;
 }
 
 class Xios implements IXios {
@@ -191,7 +195,14 @@ class Xios implements IXios {
 
   upload<T extends any>(url: string, file, options: IOption = {}): Promise<T> {
     const form = new FormData();
-    form.append('file', fs.createReadStream(file.path));
+    if(file instanceof Buffer || file instanceof Readable) {
+      form.append('file', file, {
+        filename: options.filename
+      })
+    } else {
+      form.append('file', fs.createReadStream(file.path));
+    }
+    
     if (options.data) {
       Object.keys(options.data).forEach(key => {
         form.append(key, (options.data as { [key: string]: any })[key])
