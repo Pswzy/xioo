@@ -450,11 +450,11 @@ class Query {
       const finalKey = Helper.toUline(key);
       let value = item[key] || item[finalKey];
       if (typeof value === 'string') {
-        value = `'${value}'`;
+        value = `'${value.replace(/\'/g, '\'\'')}'`;
       } else if (value === null) {
         value = value;
       } else if (typeof value === 'object') {
-        value = `'${JSON.stringify(value)}'`;
+        value = `'${JSON.stringify(value).replace(/\'/g, '\'\'')}'`;
       } else {
         value = value;
       }
