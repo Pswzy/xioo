@@ -1,6 +1,6 @@
 {
   "name": "xioo",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "xioo of project",
   "main": "./index.js",
   "dependencies": {

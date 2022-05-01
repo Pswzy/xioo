@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.4](https://github.com/zhaodeezhu/xioo/compare/v1.4.3...v1.4.4) (2022-05-01)
+
+
+### Bug Fixes
+
+* 🐛 修改未打包的问题 ([9534e00](https://github.com/zhaodeezhu/xioo/commit/9534e00e22cb06ae89b35e2413d3e8a2fb541950))
+
 ### [1.4.3](https://github.com/zhaodeezhu/xioo/compare/v1.4.2...v1.4.3) (2022-05-01)
 
 
