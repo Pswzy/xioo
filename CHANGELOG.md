@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.3](https://github.com/zhaodeezhu/xioo/compare/v1.4.2...v1.4.3) (2022-05-01)
+
+
+### Bug Fixes
+
+* 🐛 修复pg数据库更新数据数字更新失败的问题 ([523ee4f](https://github.com/zhaodeezhu/xioo/commit/523ee4fccaac79202bd9ae2cd49fc4d1ffb6c633))
+
 ### [1.4.2](https://github.com/zhaodeezhu/xioo/compare/v1.4.1...v1.4.2) (2022-04-29)
 
 
