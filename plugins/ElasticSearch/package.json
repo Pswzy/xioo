@@ -1,6 +1,6 @@
 {
   "name": "@xioo/elasticsearch",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "typings": "./build/index.d.ts",
   "main": "./build/index.js",
   "files": [
