@@ -429,7 +429,7 @@ declare module 'xioo' {
     /** 进程控制器 */
     agant: any;
     /** 动态设置请求对象 */
-    setXioosByConfig: (xioosConfig: any) => void;
+    setXioosByConfig: (xioosConfig: any, xios?: any) => void;
     /** 路由 */
     router: RouterManager;
     /** 实时通信, 只有开启了socket连接才可使用 */
