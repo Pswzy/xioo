@@ -140,6 +140,31 @@ class Release {
       console.log(`${names[1]} update v${finalVersion}`)
     })
   }
+
+  /** 映射软连接 */
+  link() {
+    const dirs = fs.readdirSync(path.join(rootDir, './plugins'));
+    childProcess.exec('npm link', {
+      cwd: rootDir
+    }, (error) => {
+      if (error) {
+        console.log(error);
+        return;
+      }
+      console.log(`success: link xioo`);
+    })
+    dirs.forEach(key => {
+      childProcess.exec('npm link', {
+        cwd: path.join(rootDir, `./plugins/${key}`)
+      }, (error) => {
+        if (error) {
+          console.log(error);
+          return;
+        }
+        console.log(`success: link ${key}`);
+      })
+    })
+  }
 }
 
 program
@@ -163,6 +188,14 @@ program
   .action((all) => {
     const rel = new Release();
     rel.publish(all);
+  })
+
+program
+  .command('link')
+  .description('映射到全局')
+  .action(() => {
+    const rel = new Release();
+    rel.link();
   })
 
 program.parse(process.argv);
