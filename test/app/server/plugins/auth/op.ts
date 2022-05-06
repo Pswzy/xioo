@@ -10,6 +10,7 @@ export default class Time extends Plugin {
     //     message: '成功了'
     //   }
     // }})
+    console.log('我是查询要测试的全局环境变量', process.env['test_prod'])
     const { service } = app;
     // let res = await service.mysql.query('select * from program_api')
     // console.log(res);

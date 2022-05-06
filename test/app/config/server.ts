@@ -19,7 +19,7 @@ export default class Config {
       host: '127.0.0.1',
       db: 8,
       password: '',
-      launch: true
+      launch: false
     }
   }
   mysql: ISource<XiooConfig.IMySQL> = {
@@ -65,7 +65,7 @@ export default class Config {
       password: '123456',
       user: 'postgres',
       database: 'eus',
-      launch: true,
+      launch: false,
       underline: true
     }
   };
