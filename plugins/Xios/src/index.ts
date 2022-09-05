@@ -57,6 +57,9 @@ interface IOption {
   filename?: string;
 }
 
+/** 自定义请求参数 */
+type IRequestOption = Omit<IOption, 'url'>;
+
 class Xios implements IXios {
   baseUrl = '';
   private host = '';
@@ -64,6 +67,23 @@ class Xios implements IXios {
   private prefix = '';
   private xioo: typeof https | typeof http = https;
   private headers: any = {}
+
+  static request(originUrl: string, options?: IRequestOption) {
+    try {
+      const { origin, pathname, search } = new url.URL(originUrl);
+      const commonXios = new Xios({baseUrl: origin });
+      return commonXios.requset({
+        ...options,
+        url: `${pathname}${search ? search : ''}`
+      });
+    } catch (e) {
+      return {
+        status: 500,
+        message: 'request请求url解析出错！',
+        data: e
+      }
+    }
+  }
 
   constructor({ baseUrl, headers }: IXiooProps) {
     this.baseUrl = baseUrl ? baseUrl : '';
